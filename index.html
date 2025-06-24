@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portifólio Pessoal Fábio</title>
+</head>
+<body>
+
+    <!-- Aqui fica a Barra de navegação do topo -->
+
+    <nav class="barra"> 
+        <ul class="menu">
+            <li><a href="#inicio" class="link">Início</a></li>   
+            <li><a href="#sobre" class="link">Sobre</a></li>
+            <li><a href="#habilidades" class="link">Habilidades</a></li>
+            <li><a href="#portifolio" class="link">Portifólio</a></li>
+            <li><a href="#contato" class="link">Contato</a></li>
+        </ul>
+    </nav>   
+   
+    <!-- aqui fica a introduçao do portifóli -->
+
+    <div class="geralinicio" id="inicio">
+        <div class="inicio">
+            <h1>Fábio Neumann</h1>
+            <p>Bem-vindo ao meu portfólio! Aqui você encontrará uma seleção dos meus projetos e habilidades como desenvolvedor frontend!</p>
+        </div>  
+        
+        <div>
+            <img src="Imagens/Fábio.jpg" class="imgfabio">
+        </div>  
+    </div>  
+   
+    <!-- aqui fica o sobre mim -->
+
+    <div class="sobremim" id="sobre">
+        <div>
+            <img src="Imagens/Fábio 2.jpg" class="imgfabio">
+        </div> 
+
+        <div class="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Sou desenvolvedor frontend e gosto muito de criar experiências digitais que realmente façam a diferença. Trabalho com HTML e CSS, sempre buscando deixar os sites bonitos, funcionais e fáceis de usar. Curto aprender coisas novas, encarar desafios e encontrar jeitos criativos de melhorar cada projeto. Quando não estou programando, gosto de jogar bola com os amigos e aproveitar um bom videogame — ajuda a relaxar, recarregar as ideias e, por que não, estimular a criatividade. Gosto de pensar que, com cada linha de código, tô deixando a web um pouquinho melhor.</p>
+        </div>   
+    </div>
+
+    <!-- aqui é uma continuação do sobre mim porem com minhas habilidades -->
+
+    <div class="habi" id="habilidades">
+        <div class="habilidades">
+            <h2>Habilidades</h2>
+            <p>Possuo inglês em nível intermediário, o que me permite compreender conteúdos técnicos, participar de conversas e estudar materiais na língua com tranquilidade. Atualmente estou cursando Análise e Desenvolvimento de Sistemas, ampliando meus conhecimentos em lógica de programação, estrutura de dados, banco de dados e práticas modernas de desenvolvimento web. Também sou formado em Técnico em Administração, o que me proporciona uma base sólida em organização, planejamento e visão estratégica — habilidades que complementam minha atuação na área de tecnologia.</p>
+        </div>
+    </div> 
+
+    <!-- aqui começa a apresentação dps meus projetos -->
+
+    <div class="portitulo" id="portifolio">
+        <h2 class="txtlr">Portfólio</h2>
+    </div>
+
+    <div class="portigeral">
+        <div class="portifoliolr">
+            <h3 class="txtlr">Lr Barbearia</h3>
+            <a href="https://fhns2006.github.io/lrbarbearia/" class="link2"><img src="Imagens/LR.png" class="imglr"></a>
+            <a href="https://fhns2006.github.io/lrbarbearia/" class="link2"><h3 class="txtclk">Clique e Acesse</h3></a>
+        </div>
+
+        <div class="portifoliolr">
+            <h3 class="txtlr">Tunicão</h3>
+            <a href="https://fhns2006.github.io/tunicao/" class="link2"><img src="Imagens/TUNICAO.png" class="imglr"></a>
+            <a href="https://fhns2006.github.io/tunicao/" class="link2"><h3 class="txtclk">Clique e Acesse</h3></a>
+        </div>
+    </div>
+
+
+    <!-- aqui você pode entrar em contato comigo -->
+
+    <div class="contatotitulo" id="contato">
+        <h2 class="txtlr">Contato</h2>
+    </div>
+
+    <section id="contatos" class="contatos">
+      <form class="formulario-contato" id="formulario" onsubmit="enviar(event)">
+        <div class="grupo-form">
+          <input placeholder="Nome" class="campo-form" id="nome" />
+        </div>
+        <div class="grupo-form">
+          <textarea
+            rows="6"
+            id="mensagem"
+            class="campo-form"
+            placeholder="Digite aqui sua mensagem."
+          ></textarea>
+        </div>
+        <button type="submit" class="btn-form">Enviar Whatsapp</button>
+      </form>
+    </section> 
+    
+    <script>
+      function enviar(event) {
+        event.preventDefault();
+
+        const nome = document.getElementById("nome").value;
+        const mensagem = document.getElementById("mensagem").value;
+        const telefone = "5541984000638";
+        const texto = `Olá, me chamo ${nome}, ${mensagem}`;
+        const msgFormatada = encodeURIComponent(texto);
+        const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+
+        window.open(url, "_blank"); 
+      }
+    </script>
+
+    <!-- rodapé do meu site -->
+
+    <footer class="rodape">
+        <p>Desenvolvido por Fábio Neumann</p>
+        <p>© 2025</p>
+    </footer>
+
+</body>
+</html>
